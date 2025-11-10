@@ -18,6 +18,7 @@ function PhoneShopping() {
           className=" color-primary sm445:h-[160px] sm445:w-[210px] md:w-[280px] "
           width={130}
           height={150}
+          priority
         />
       </div>
       <div className=" w-full flex md:flex-col md:w-[40%]  items-center justify-center gap-4 px-4 py-4">
@@ -26,6 +27,7 @@ function PhoneShopping() {
           width={130}
           height={130}
           alt="PhoneNumber"
+          
         />
         <button className="border rounded-xl bg-secondory font-medium text-white text-xs  px-7 py-2 sm445:px-4 md:px-8   sm445:text-sm sm445:font-normal ">
           اطلاعات بیشتر
