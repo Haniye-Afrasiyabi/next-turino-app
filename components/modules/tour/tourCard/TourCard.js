@@ -4,7 +4,7 @@ function TourCard({ tour }) {
   return (
     <div className="w-full sm445:w-[20.465rem] border border-gray4 rounded-xl shadow-sm">
       <Image
-        src={tour.image}
+        src={`${process.env.NEXT_PUBLIC_BASE_URL}${tour.image}`}
         alt={tour.title}
         width={100}
         height={100}

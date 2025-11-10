@@ -57,7 +57,7 @@ export default function TourDetailMobile() {
     <div className="w-full bg-white1 md:pt-7 md:pb-10  ">
       <div className="flex flex-col  px-6 pt-6 pb-14 bg-white md:w-[85%] mx-auto md:border md:border-gray9 md:rounded-xl">
         <Image
-          src={tour.image}
+          src={`${process.env.NEXT_PUBLIC_BASE_URL}${tour.image}`}
           alt={tour.title}
           className="w-full m-auto  h-60 object-fill rounded-xl  sm:w-[20.625rem]"
           width={400}

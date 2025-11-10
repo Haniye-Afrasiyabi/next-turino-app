@@ -61,7 +61,7 @@ export default function TourDetailDesktop() {
         <div className="flex  gap-2">
           <div>
             <Image
-              src={tour.image}
+              src={`${process.env.NEXT_PUBLIC_BASE_URL}${tour.image}`}
               alt={tour.title}
               className="w-full m-auto  h-60 object-fill rounded-xl  md:w-[20.625rem] "
               width={400}

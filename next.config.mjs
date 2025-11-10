@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
- 
   images: {
-    domains: ["localhost"],
+    // domains: ["localhost"],
+    domains: ["travel-agency-api-fq5j.onrender.com"],
   },
 };
 
