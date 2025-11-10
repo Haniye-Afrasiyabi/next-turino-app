@@ -2,14 +2,20 @@
 
 const nextConfig = {
   images: {
-    // domains: ["localhost"],
+    // domains: ["localhost"], //قبل از deploy
     // domains: ["travel-agency-api-fq5j.onrender.com"],
     remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "6500", // پورت سرور لوکال بک‌اند
+        pathname: "/**",
+      },
       {
         protocol: "https",
         hostname: "travel-agency-api-fq5j.onrender.com",
         port: "",
-        pathname: "/**", // اجازه می‌ده همه مسیرهای این دامنه بارگذاری بشن
+        pathname: "/**",
       },
     ],
   },

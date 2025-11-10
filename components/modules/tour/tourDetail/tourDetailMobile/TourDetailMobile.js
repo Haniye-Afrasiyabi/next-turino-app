@@ -53,11 +53,20 @@ export default function TourDetailMobile() {
   //loading
   if (!tour) return <Spinner />;
 
+  const imageUrl = tour.image.startsWith("http")
+    ? tour.image.replace(
+        "http://localhost:6501",
+        process.env.NEXT_PUBLIC_BASE_URL
+      ) // لوکال به BASE_URL تبدیل می‌کنیم
+    : `${process.env.NEXT_PUBLIC_BASE_URL}/${tour.image.replace(/^\/?/, "")}`;
+
+  console.log("Final image URL:", imageUrl);
+
   return (
     <div className="w-full bg-white1 md:pt-7 md:pb-10  ">
       <div className="flex flex-col  px-6 pt-6 pb-14 bg-white md:w-[85%] mx-auto md:border md:border-gray9 md:rounded-xl">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_URL}${tour.image}`}
+          src={imageUrl}
           alt={tour.title}
           className="w-full m-auto  h-60 object-fill rounded-xl  sm:w-[20.625rem]"
           width={400}
