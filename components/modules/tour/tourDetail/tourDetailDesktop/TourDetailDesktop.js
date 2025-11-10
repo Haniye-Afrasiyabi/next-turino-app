@@ -16,6 +16,7 @@ import Bus from "@/components/icons/Bus";
 import Routing from "@/components/icons/Routing";
 import CalendarBlack from "@/components/icons/CalendarBlack";
 import Spinner from "@/components/partials/loading/Spinner";
+import { getImageUrl } from "@/core/utils/getImageUrl";
 
 export default function TourDetailDesktop() {
   const [tour, setTour] = useState(null);
@@ -55,14 +56,7 @@ export default function TourDetailDesktop() {
   //loading
   if (!tour) return <Spinner />;
 
-  const imageUrl = tour.image.startsWith("http")
-    ? tour.image.replace(
-        "http://localhost:6501",
-        process.env.NEXT_PUBLIC_BASE_URL
-      ) // لوکال به BASE_URL تبدیل می‌کنیم
-    : `${process.env.NEXT_PUBLIC_BASE_URL}/${tour.image.replace(/^\/?/, "")}`;
-
-  console.log("Final image URL:", imageUrl);
+  const imageUrl = getImageUrl(tour.image);
 
   return (
     <div className="w-full bg-white1 md:pt-7 md:pb-10  ">

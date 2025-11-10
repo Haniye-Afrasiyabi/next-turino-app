@@ -1,14 +1,9 @@
+import { getImageUrl } from "@/core/utils/getImageUrl";
 import Image from "next/image";
 import Link from "next/link";
 function TourCard({ tour }) {
-  const imageUrl = tour.image.startsWith("http")
-    ? tour.image.replace(
-        "http://localhost:6501",
-        process.env.NEXT_PUBLIC_BASE_URL
-      ) // لوکال به BASE_URL تبدیل می‌کنیم
-    : `${process.env.NEXT_PUBLIC_BASE_URL}/${tour.image.replace(/^\/?/, "")}`;
+  const imageUrl = getImageUrl(tour.image);
 
-  console.log("Final image URL:", imageUrl);
   return (
     <div className="w-full sm445:w-[20.465rem] border border-gray4 rounded-xl shadow-sm">
       <Image
