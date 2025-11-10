@@ -9,6 +9,7 @@ function BannerTorino() {
         height={350}
         className="w-full h-[350px]"
         alt="بنر تورینو"
+        priority
       />
     </div>
   );

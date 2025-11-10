@@ -69,6 +69,7 @@ export default function TourDetailDesktop() {
               className="w-full m-auto  h-60 object-fill rounded-xl  md:w-[20.625rem] "
               width={400}
               height={400}
+              priority
             />
           </div>
 

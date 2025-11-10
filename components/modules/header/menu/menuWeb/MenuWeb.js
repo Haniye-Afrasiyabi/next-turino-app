@@ -10,6 +10,7 @@ function MenuWeb() {
           width={146}
           height={44}
           alt="Torino Logo"
+          priority
         />
       </Link>
 

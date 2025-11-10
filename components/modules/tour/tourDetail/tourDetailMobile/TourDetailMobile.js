@@ -65,6 +65,7 @@ export default function TourDetailMobile() {
           className="w-full m-auto  h-60 object-fill rounded-xl  sm:w-[20.625rem]"
           width={400}
           height={400}
+          priority
         />
 
         <div className="flex justify-between mt-6 md:flex-col">
