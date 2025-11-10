@@ -14,8 +14,8 @@ function Volume() {
       <path
         d="M12.8867 5.83337C14.0734 7.41337 14.0734 9.58671 12.8867 11.1667"
         stroke="#171717"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
