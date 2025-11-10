@@ -51,7 +51,7 @@ function CalenderIcon() {
       <path
         d="M13.0789 14.4167H13.0864"
         stroke="#2C2C2C"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
